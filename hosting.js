@@ -36,6 +36,20 @@
       text-decoration: none;
       cursor: pointer;
     }
+
+    .custom-modal-heading {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+      font-family: sans-serif;
+    }
+
+    .custom-modal-paragraph {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.5;
+      font-family: sans-serif;
+    }
   `;
   document.head.appendChild(style);
 
@@ -52,9 +66,11 @@
 
   var heading = document.createElement('h2');
   heading.textContent = 'SCREW LTD.';
+  heading.className = 'custom-modal-heading';
 
   var paragraph = document.createElement('p');
   paragraph.textContent = `This page is running in preview mode on the company's public server. It is not suitable for commercial use and is suitable for local display only.`;
+  paragraph.className = 'custom-modal-paragraph';
 
   modalContent.appendChild(closeButton);
   modalContent.appendChild(heading);
